@@ -17,6 +17,9 @@ Configure your AWS credentials once per Nextflow environment:
 ```bash
 nextflow secrets set AWS_ACCESS_KEY '<Your_Access_Key>'
 nextflow secrets set AWS_SECRET_KEY '<Your_Secret_Key>'
+
+# Verify that the secrets are correctly set
+nextflow secrets list
 ```
 
 ### 3. Export Dragen License Credentials
