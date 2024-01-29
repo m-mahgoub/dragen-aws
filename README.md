@@ -7,7 +7,7 @@
 Start an LSF interactive job with pre-mounted volumes and docker:
 
 ```bash
-bsub -G compute-dspencer -Is -q general-interactive -R"select[mem>24000] rusage[mem=24000]" -M 24000000 -n 4 -a "docker(mdivr/nextflow:20230925)" /bin/bash -l
+LSF_DOCKER_VOLUMES="/storage1/fs1/dspencer/Active:/storage1/fs1/dspencer/Active /scratch1/fs1/dspencer:/scratch1/fs1/dspencer /storage1/fs1/timley/Active:/storage1/fs1/timley/Active $HOME:$HOME" bsub -G compute-dspencer -Is -g /mohamed/interactive -q general-interactive -R"select[mem>24000] rusage[mem=24000]" -M 24000000 -n 4 -a "docker(mdivr/nextflow:20230925)" /bin/bash -l
 ```
 
 ### 2. Set AWS Credentials
