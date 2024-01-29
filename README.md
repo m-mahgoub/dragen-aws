@@ -39,21 +39,21 @@ Execute the Nextflow workflow in your preferred mode:
 
 ```bash
 NXF_HOME=${PWD}/.nextflow && \
-nextflow run m-mahgoub/dragen-aws -r main --latest --dragen_username $DRAGEN_USERNAME --dragen_password $DRAGEN_PASSWORD -profile hybrid -bucket-dir s3://dspencer-dragen-data/tmp/ --outdir results
+nextflow run m-mahgoub/dragen-aws -r main -latest --dragen_username $DRAGEN_USERNAME --dragen_password $DRAGEN_PASSWORD -profile hybrid -bucket-dir s3://dspencer-dragen-data/tmp/ --outdir results
 ```
 
 **AWS-only:**
 
 ```bash
 NXF_HOME=${PWD}/.nextflow && \
-nextflow run m-mahgoub/dragen-aws -r main --latest --dragen_username $DRAGEN_USERNAME --dragen_password $DRAGEN_PASSWORD -profile aws -bucket-dir s3://dspencer-dragen-data/tmp/ --outdir results
+nextflow run m-mahgoub/dragen-aws -r main -latest --dragen_username $DRAGEN_USERNAME --dragen_password $DRAGEN_PASSWORD -profile aws -bucket-dir s3://dspencer-dragen-data/tmp/ --outdir results
 ```
 
 **LSF-only:**
 
 ```bash
 NXF_HOME=${PWD}/.nextflow && \
-nextflow run m-mahgoub/dragen-aws -r main --latest -profile ris --outdir results
+nextflow run m-mahgoub/dragen-aws -r main -latest -profile ris --outdir results
 ```
 
 Replace placeholders (`<Username>`, `<Password>`, `<Your_Access_Key>`, `<Your_Secret_Key>`) with actual values. Ensure AWS and LSF configurations are properly set before executing the workflows.
