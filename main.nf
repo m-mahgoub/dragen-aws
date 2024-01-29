@@ -23,7 +23,7 @@ process dragen {
     label 'dragen'
     cpus 12
     memory '200 GB'
-    container ext.image ?: 'etycksen/dragen4:4.2.4'
+    container "${ext.image}" ?: 'etycksen/dragen4:4.2.4'
 
     input:
         path (hash)
